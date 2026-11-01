@@ -1,0 +1,44 @@
+# Paper A — AutoDL / local experiment config
+# Default study area: a ~40 km box on the Yan River loess gully region.
+# Area is large enough for a non-degenerate morphological spectrum, small
+# enough for a 30–120 m stack to finish in tens of minutes.
+
+project:
+  name: paper_a_morph_spectrum
+  out_dir: outputs
+  data_dir: data
+
+study:
+  name: yanhe_loess
+  west: 109.28
+  east: 109.62
+  south: 36.48
+  north: 36.78
+  # Albers equal-area, origin near the box (meters)
+  proj: "+proj=aea +lat_0=36.6 +lon_0=109.45 +lat_1=25 +lat_2=47 +datum=WGS84 +units=m +no_defs"
+  confirm_name: sichuan_hills
+  confirm_west: 103.55
+  confirm_east: 103.85
+  confirm_south: 30.55
+  confirm_north: 30.82
+  confirm_proj: "+proj=aea +lat_0=30.7 +lon_0=103.7 +lat_1=25 +lat_2=47 +datum=WGS84 +units=m +no_defs"
+
+dem:
+  # COP30 = Copernicus GLO-30 DSM via OpenTopography
+  primary: COP30
+  alternate: NASADEM
+  api_env: OPENTOPO_API_KEY
+
+experiment:
+  resolutions_m: [30, 60, 90, 120]
+  rotations_deg: [0, 15, 30, 45]
+  n_scales: 12
+  radius_frac_of_width: 0.10
+  square_se: 8          # 8-neighborhood disk; E3 also runs 4
+  device: auto          # auto | cpu | cuda
+
+synthetic:
+  # Used if OpenTopography is unavailable; still exercises E0–E5.
+  nx: 512
+  ny: 512
+  cell_m: 30

@@ -1,0 +1,19 @@
+name: paper_a
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - numpy=1.26
+  - scipy
+  - scikit-image
+  - matplotlib
+  - pyyaml
+  - requests
+  - shapely
+  - pyproj
+  - affine
+  - tqdm
+  - pillow
+  - rasterio
+  - pip
