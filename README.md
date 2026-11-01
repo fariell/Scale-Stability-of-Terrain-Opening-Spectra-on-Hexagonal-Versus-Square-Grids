@@ -6,10 +6,13 @@ Revision materials for IEEE GRSL manuscript **GRSL-02429-2026**:
 Author: Yinggang Guo (Northwest Institute of Nuclear Technology, Xi'an).
 Contact: fariel_gyg@163.com. ORCID: 0000-0002-8207-9941.
 
-This repository is the public artifact for the revision. It contains the
-Python code, study-window definitions, and tabulated spectra used in the
-letter. Copernicus GLO-30 GeoTIFFs are **not** redistributed (Copernicus
-licence); bounding boxes and PROJ strings are in `paper_a/config.yaml`.
+Repository:
+https://github.com/fariell/Scale-Stability-of-Terrain-Opening-Spectra-on-Hexagonal-Versus-Square-Grids
+
+This is the public artifact for the GRSL revision. It contains the Python
+code, study-window definitions, and tabulated spectra used in the letter.
+Copernicus GLO-30 GeoTIFFs are **not** redistributed (Copernicus licence);
+bounding boxes and PROJ strings are in `paper_a/config.yaml`.
 
 ## Reproduce the revision tables
 
