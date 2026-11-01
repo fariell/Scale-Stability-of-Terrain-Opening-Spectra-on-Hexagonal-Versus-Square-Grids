@@ -23,10 +23,13 @@ conda env create -f paper_a/environment.yml   # or pip install -r paper_a/requir
 cd paper_a
 python run_revision.py
 python run_revision_e2_figures.py
+python run_tile_bootstrap.py
 ```
 
 CSV/JSON under `paper_a/outputs/revision/` are the numbers in Table I and
-Figs. 3–4. The letter source is `grsl_hex_spectrum/main.tex`.
+Figs. 3–4. `tile_w1_bootstrap.json` is the nine-tile spatial-block bootstrap
+(B=10000) cited in Sec. IV-A. The letter source is
+`grsl_hex_spectrum/main.tex`.
 
 ## Licence
 
